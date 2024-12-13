@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/otp_enter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpEnter"
+    android:background="@color/black">
+
+    <!-- Back Arrow Image -->
+    <ImageView
+        android:id="@+id/arrow_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/arrow_back"
+        android:contentDescription="back_arrow"/>
+
+    <!-- logo Image -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_logo"/>
+
+    <!-- OTP Title Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:layout_centerHorizontal="true"
+        android:text="OTP"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
+
+    <!-- OTP Instructions Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Enter the 6-digit OTP sent to"
+        tools:ignore="HardcodedText" />
+
+    <!-- Phone Number Text -->
+    <TextView
+        android:id="@+id/phone_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="+1 XXX XXX XX96"
+        tools:ignore="HardcodedText" />
+
+    <!-- Edit Phone Number Icon -->
+    <ImageView
+        android:id="@+id/edit_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="379dp"
+        android:layout_marginStart="280dp"
+        android:contentDescription="edit_number"
+        android:src="@drawable/baseline_edit_24"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentTop="true"
+        tools:ignore="HardcodedText" />
+
+    <!-- OTP Input Fields -->
+    <LinearLayout
+        android:id="@+id/otp_Container"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- OTP Input 1 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Space Between Inputs -->
+        <Space android:layout_width="12dp" android:layout_height="match_parent" />
+
+        <!-- OTP Input 2 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Space Between Inputs -->
+        <Space android:layout_width="12dp" android:layout_height="match_parent" />
+
+        <!-- OTP Input 3 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Space Between Inputs -->
+        <Space android:layout_width="12dp" android:layout_height="match_parent" />
+
+        <!-- OTP Input 4 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Space Between Inputs -->
+        <Space android:layout_width="12dp" android:layout_height="match_parent" />
+
+        <!-- OTP Input 5 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Space Between Inputs -->
+        <Space android:layout_width="12dp" android:layout_height="match_parent" />
+
+        <!-- OTP Input 6 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="1"
+            app:errorEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edit6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:hint="0"
+                android:textColorHint="#808080"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Continue Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_button"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        app:cornerRadius="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="510dp"
+        android:backgroundTint="@color/white"
+        android:text="CONTINUE"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+    <!-- Resend Button -->
+    <TextView
+        android:id="@+id/resend_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="590dp"
+        android:focusable="true"
+        android:text="Didn't receive the code? Resend"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:clickable="true"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

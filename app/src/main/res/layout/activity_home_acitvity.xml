@@ -1,0 +1,719 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeAcitvity"
+    android:background="@color/black"
+    >
+
+    <!--Menu buttom-->
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:focusable="true"
+        android:src="@drawable/menu"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="22dp"
+        android:clickable="true"
+        />
+
+    <!--Zendo Logo-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_zendo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--notification bell-->
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:focusable="true"
+        android:src="@drawable/baseline_notifications_24"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        />
+
+    <!--settings-->
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:focusable="true"
+        android:src="@drawable/baseline_settings_24"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        />
+
+    <!--Upload Photo text-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Upload Photo"
+        />
+
+    <!--Upload Button-->
+    <FrameLayout
+        android:layout_width="360dp"
+        android:layout_height="142dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp">
+
+        <!--  First ImageView (Background image)  -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/toas"
+            android:contentDescription="Background image"
+            />
+
+        <!--  Shaded overlay (semi-transparent dark color)  -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            />
+
+        <!--  Second ImageView (Overlay image)  -->
+        <ImageView
+            android:id="@+id/add_icon"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_add_circle"
+            android:layout_gravity="center"
+            android:contentDescription="add_icon"
+            />
+
+    </FrameLayout>
+
+    <!--  Popup content (Upload button layout hidden by default)  -->
+    <FrameLayout
+        android:id="@+id/upload_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        >
+        <!--  Gallery Button  -->
+        <Button
+            android:id="@+id/gallery_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Gallery"
+            />
+        <!--  Camera Button  -->
+        <Button
+            android:id="@+id/camera_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Camera"
+            />
+    </FrameLayout>
+
+    <!--  Choose Room text  -->
+    <TextView
+        android:layout_width="114dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:text="Choose Room"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+    <!--  Kitchen HorizontalScrollView  -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fillViewport="true"
+        android:layout_marginTop="275dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--  kitchen FrameLayout  -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:padding="10dp">
+
+                <!--  First ImageView (background circle)  -->
+                <ImageView
+                    android:id="@+id/kitchen"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:layout_marginStart="10dp"
+                    android:focusable="true"
+                    android:src="@drawable/circle"
+                    />
+
+                <!--  Second ImageView (centered spice icon)  -->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/spices_icon"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="20dp"
+                    android:text="Kitchen"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+            </FrameLayout>
+
+            <!--  restaurant FrameLayout  -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:padding="10dp">
+
+                <!--  First ImageView (background circle)  -->
+                <ImageView
+                    android:id="@+id/restaurant"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:layout_marginStart="10dp"
+                    android:focusable="true"
+                    android:src="@drawable/circle"
+                    />
+                <!--  Second ImageView (centered spice icon)  -->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/meal_food"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:text="Restaurant"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+            </FrameLayout>
+
+            <!--  bedroom FrameLayout  -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:padding="10dp">
+
+                <!--  First ImageView (background circle)  -->
+                <ImageView
+                    android:id="@+id/bedroom"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:layout_marginStart="10dp"
+                    android:focusable="true"
+                    android:src="@drawable/circle"
+                    />
+
+                <!--  Second ImageView (centered spice icon)  -->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/sleep_icon"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="15dp"
+                    android:text="Bedroom"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+            </FrameLayout>
+
+            <!--  bathroom FrameLayout  -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:padding="10dp">
+
+                <!--  First ImageView (background circle)  -->
+                <ImageView
+                    android:id="@+id/bathroom"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/circle"
+                    />
+
+                <!--  Second ImageView (centered spice icon)  -->
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/wash_basin"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="15dp"
+                    android:text="Bathroom"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+            </FrameLayout>
+            <!--  You can keep adding more FrameLayouts as needed  -->
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!--  Select Style  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:text="Select Style"
+        android:textSize="18sp"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fillViewport="true"
+        android:layout_marginTop="425dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--  Vintage card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- Vintage image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/deborah"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:textStyle="normal"
+                    android:text="Vintage"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <!--  Modern card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- modern image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/modern_image"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Modern"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <!--  Tropical card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- tropical image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/henri_lajarrige"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Tropical"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <!--  Tropical card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- tropical image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/modern_image"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Tropical"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <!--  You can keep adding more FrameLayouts as needed  -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- second scroll menu -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:fillViewport="true"
+        android:layout_marginTop="570dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--  Vintage card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- Vintage image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/deborah"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Vintage"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--  Modern card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- modern image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/modern_image"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Modern"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--  Tropical card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- tropical image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/henri_lajarrige"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Tropical"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <!--  Tropical card  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <!-- tropical image  -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@drawable/modern_image"
+                    />
+
+                <!--  TextView (bottom aligned)  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="3dp"
+                    android:text="Tropical"
+                    android:textColor="#1A1919"
+                    android:textSize="16sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <!--  You can keep adding more FrameLayouts as needed  -->
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- Generate button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="720dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        app:cornerRadius="5dp"
+        android:text="GENERATE"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+    <!-- add button -->
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/baseline_add_circle"
+        />
+
+    <!-- bottom menu -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginBottom="-12dp"
+        android:layout_alignParentBottom="true">
+
+        <!--  First ImageView (Background image)  -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bottom"
+            android:contentDescription="Background image"
+            />
+
+        <!--  Home ImageView (Overlay image)  -->
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/vector"
+            android:contentDescription="home"
+            />
+
+        <!--  Imageout ImageView (Overlay image)  -->
+        <ImageView
+            android:id="@+id/image_out"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="100dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/img_out1"
+            android:contentDescription="img_out1"
+            />
+
+        <!--  settings ImageView (Overlay image)  -->
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="270dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/material_symbols_settings"
+            android:contentDescription="settings_icon"
+            tools:ignore="DuplicateIds"
+            />
+
+        <!-- profile ImageView (Overlay image)  -->
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="350dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/user"
+            android:contentDescription="user_profile"
+            />
+
+    </FrameLayout>
+</RelativeLayout>
